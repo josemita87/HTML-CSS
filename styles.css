@@ -1,0 +1,185 @@
+html {
+    background-color:#F0F0F0;
+}
+
+body {
+    /* General style of the body of the page */
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: Gill Sans, sans-serif;
+    font-size: 1.2em;/* means 1.2 times the size of the font */
+    color: chocolate;
+    background-color: white;
+    padding: 90px;
+    padding-top: 15px;
+
+}
+
+
+/* H TAGS */
+
+h1 {
+    font-size: 3em;
+    color: #FF2C00;
+}
+
+h1.toptitle {   /* Main title of the page */
+    
+    margin-bottom: 10px;
+    text-align: center;
+}
+ /* Default styles for h2 , h3 and anchors */
+h2 {
+    font-size: 1.5em;
+    color: #FF8500;
+}
+
+h3 {
+    font-size: 1.2em;
+    color: #00B945;
+}
+a {
+    text-decoration:none;
+    color: darkred;
+}
+
+
+/* ASIDE - Style assigned to the right side block */
+
+aside {
+    float: right; /* tight right */
+    width: 320px;
+    margin-left: 40px;
+    margin-right: 10px;
+    background-color: #D0D0D0;
+    padding: 20px;
+    border: 3px solid #A8A8A8;
+}
+
+aside ul li a {      /* specific style of the links of the unordered list items of the aside */
+    color: deepskyblue;
+}
+
+aside h1 {  /* Style of the h1 header of the aside */
+    
+    font-size: 1.2em;
+    margin-top: 0px;
+}
+
+aside h2 {  /* h2 header style of the aside */
+    
+    font-size: 1em;
+}
+
+aside div {  /* DIV style of the aside */
+  
+    padding: 15px;
+    background-color: #F0F0F0;
+    margin-bottom: 10px;
+}
+
+
+aside ul {  /* Style of the unordered list of the aside section */
+    
+    line-height: 1.8em;
+    list-style-type: disc;
+    color: #FF8500;
+}
+
+header {    /* margin applied to de <header> seciotn */
+
+    margin-bottom: 30px;
+}
+
+
+/* <NAV> navigation menu styles */
+
+nav {
+    text-align: center;
+    margin-top: 15px;
+}
+
+nav h1 {
+    display:none;
+}
+
+nav ul {
+
+    margin: 0;
+    padding: 0;
+}
+
+nav li {   /* displays the list items on the same line */
+    display: inline;
+   
+}
+
+nav a {   /* Style of the links of the navigation menu items */
+   
+    font-weight: bold;
+    color: #0776A0;
+}
+
+nav hr { /* Style of the navigation menu divider lines <hr> */
+   
+    width: 750px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #63DC90;
+    height: 5px;
+    border: none;
+
+}
+
+footer {    /* <footer> style */
+
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
+}
+
+
+/* img.top-image - Esade logo style  */
+
+.top-image {
+    width: 70px;
+    height: auto;
+    float: left;
+}
+
+.quote p {  /* paragraph style in the .quote class (used in ASIDE)*/
+    font-style: italic;
+}
+
+.body-list {  /* body-list class of the elements of the unordered list in the body */
+  
+    list-style-image: url('../images/small_arrow.png');
+    line-height: 1.8em;  /* inter-line distance <li> */
+    
+}
+
+
+/* Styles of sections 0, 1 and 2  */
+
+.section0 {
+    background-color: rgb(228, 244, 228);
+    margin-right: 400px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.section1 {
+    background-color: rgb(248, 246, 212);
+    margin-right: 400px;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+.section2 {
+    background-color: bisque;
+    margin-right: 400px;
+    padding: 15px;
+    margin-top: 10px;
+}
