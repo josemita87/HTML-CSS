@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ML For Everyone - Simplify Your Workflow</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="#"><h1>ML For Everyone</h1></a>
+            </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><button data-target="features">Features</button></li>
+                    <li><button data-target="pricing">Pricing</button></li>
+                    <li><button data-target="testimonials">Testimonials</button></li>
+                    <li><button data-target="contact">Contact</button></li>
+                    <li><a href="#login" class="btn-login">Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="video-background">
+            <video autoplay muted loop playsinline>
+                <source src="video/data.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Transform the Way You Work</h1>
+                <p>Our SaaS product helps you streamline your workflow, improve productivity, and scale effortlessly.</p>
+                <button data-target="signup" class="btn-primary">Get Started for Free</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <div class="features" id="features">
+        <h2>Features That Make a Difference</h2>
+        <div class="features-grid" img>
+            <div class="feature-item">
+                <img src="images/icon1.jpg" alt="Feature 1">
+                <h3>Real-Time Collaboration</h3>
+                <p>Collaborate with your team in real-time, from anywhere.</p>
+            </div>
+            <div class="feature-item">
+                <img src="images/icon2.jpg" alt="Feature 2">
+                <h3>Advanced Analytics</h3>
+                <p>Gain insights with powerful data and reporting tools.</p>
+            </div>
+            <div class="feature-item">
+                <img src="images/icon3.jpg" alt="Feature 3">
+                <h3>Automation Tools</h3>
+                <p>Automate repetitive tasks and focus on what matters.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2>Pricing Plans for Every Team</h2>
+            <div class="pricing-cards">
+                <div class="card">
+                    <h3>Starter</h3>
+                    <p class="price">$19/mo</p>
+                    <ul>
+                        <li>Basic Features</li>
+                        <li>Email Support</li>
+                        <li>Up to 10 Users</li>
+                    </ul>
+                    <button data-target="signup" class="btn-secondary">Get Started</button>
+                </div>
+                <div class="card popular">
+                    <h3>Pro</h3>
+                    <p class="price">$49/mo</p>
+                    <ul>
+                        <li>All Basic Features</li>
+                        <li>Priority Support</li>
+                        <li>Unlimited Users</li>
+                    </ul>
+                    <button data-target="signup" class="btn-secondary">Get Started</button>
+                </div>
+                <div class="card">
+                    <h3>Enterprise</h3>
+                    <p class="price">Custom</p>
+                    <ul>
+                        <li>Advanced Features</li>
+                        <li>Dedicated Support</li>
+                        <li>Custom Integrations</li>
+                    </ul>
+                    <button data-target="contact" class="btn-secondary">Contact Us</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other sections remain unchanged -->
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <p>&copy; 2025 ML for Everyone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+            // Sticky header effect
+            window.addEventListener('scroll', function () {
+                const header = document.querySelector('.header');
+                if (window.scrollY > 50) {
+                    header.classList.add('sticky');
+                } else {
+                    header.classList.remove('sticky');
+                }
+            });
+    
+            // Contact form validation
+            const form = document.querySelector('.contact-form');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    const name = form.querySelector('input[name="name"]').value;
+                    const email = form.querySelector('input[name="email"]').value;
+                    const message = form.querySelector('textarea[name="message"]').value;
+    
+                    if (name && email && message) {
+                        alert('Thank you for your message!');
+                        form.reset();
+                    } else {
+                        alert('Please fill out all fields.');
+                    }
+                });
+            }
+    </script>
+</body>
+</html>

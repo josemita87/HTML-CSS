@@ -1,185 +1,430 @@
-html {
-    background-color:#F0F0F0;
+/* General Reset and Typography */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 
 body {
-    /* General style of the body of the page */
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-    font-family: Gill Sans, sans-serif;
-    font-size: 1.2em;/* means 1.2 times the size of the font */
-    color: chocolate;
-    background-color: white;
-    padding: 90px;
-    padding-top: 15px;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
 
+/* Header Styles */
+.header {
+    position: fixed;
+    margin-top:10px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 20px 0;
+    z-index: 1000;
+    transition: background 0.3s ease;
+    height: 80px;
+}
+
+.header.sticky {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header .logo h1 {
+    font-size: 24px;
+    color: #fff;
+}
+
+.header .nav-menu ul {
+    list-style: none;
+    display: flex;
+}
+
+.header .nav-menu li {
+    margin: 0 15px;
+}
+
+.header .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.btn-login {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    transition: opacity 0.3s ease;
+    opacity: 0.9;
+}   
+
+.btn-login:hover {
+    opacity: 1;
 }
 
 
-/* H TAGS */
-
-h1 {
-    font-size: 3em;
-    color: #FF2C00;
+.header button {
+    padding: 10px 20px;
+    font-size: 17px;
+    background-color: #6c757d00;
+    color: #ffffff;
+    border: none;
+    opacity: 1;
+    transition: color 0.3s ease;
+}
+.header button:hover {
+    color : yellow
+}
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 1700px;
+    color: #fff;
+    background-color: #333;
+    overflow: hidden;
 }
 
-h1.toptitle {   /* Main title of the page */
-    
-    margin-bottom: 10px;
+.hero-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
 }
- /* Default styles for h2 , h3 and anchors */
-h2 {
-    font-size: 1.5em;
-    color: #FF8500;
+
+/* Video Background */
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; /* Adjust the height as needed */
+    z-index: 0;
 }
 
-h3 {
-    font-size: 1.2em;
-    color: #00B945;
-}
-a {
-    text-decoration:none;
-    color: darkred;
+.hero-text h1 {
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    z-index: 2;
 }
 
-
-/* ASIDE - Style assigned to the right side block */
-
-aside {
-    float: right; /* tight right */
-    width: 320px;
-    margin-left: 40px;
-    margin-right: 10px;
-    background-color: #D0D0D0;
-    padding: 20px;
-    border: 3px solid #A8A8A8;
+.hero-text p {
+    font-size: 20px;
+    margin-bottom: 40px;
+    z-index: 2;
 }
 
-aside ul li a {      /* specific style of the links of the unordered list items of the aside */
-    color: deepskyblue;
+.btn-primary {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #ffffff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+    border: none;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.btn-primary:hover {
+    transform: translateY(5px);
 }
 
-aside h1 {  /* Style of the h1 header of the aside */
-    
-    font-size: 1.2em;
-    margin-top: 0px;
+/* Features Section */
+.features {
+    position: absolute;
+    bottom: 0%;
+    left: 0;
+    width: 100%;
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+    color: #333;
+    z-index: 30;
 }
 
-aside h2 {  /* h2 header style of the aside */
-    
-    font-size: 1em;
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 01;
+}
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
-aside div {  /* DIV style of the aside */
-  
-    padding: 15px;
-    background-color: #F0F0F0;
-    margin-bottom: 10px;
+.features-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-
-aside ul {  /* Style of the unordered list of the aside section */
-    
-    line-height: 1.8em;
-    list-style-type: disc;
-    color: #FF8500;
-}
-
-header {    /* margin applied to de <header> seciotn */
-
+.feature-item {
+    width: 30%;
     margin-bottom: 30px;
 }
 
+.feature-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+}
 
-/* <NAV> navigation menu styles */
+.feature-item h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
 
-nav {
+.feature-item p {
+    font-size: 16px;
+}
+
+/* Pricing Section */
+.pricing {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
     text-align: center;
-    margin-top: 15px;
 }
 
-nav h1 {
-    display:none;
+.pricing h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
 }
 
-nav ul {
-
-    margin: 0;
-    padding: 0;
+.pricing-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-nav li {   /* displays the list items on the same line */
-    display: inline;
-   
+.card {
+    width: 30%;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    text-align: center;
+    transition: transform 0.3s ease
 }
 
-nav a {   /* Style of the links of the navigation menu items */
-   
-    font-weight: bold;
-    color: #0776A0;
+.card:hover {
+    transform: translateY(-5px);
 }
 
-nav hr { /* Style of the navigation menu divider lines <hr> */
-   
-    width: 750px;
-    margin-right: auto;
-    margin-left: auto;
-    background-color: #63DC90;
-    height: 5px;
+.card:active {
+    transform: scale(0.98);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.card h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.card .price {
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.card ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.card .btn-secondary {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.card.popular {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.card.popular .price {
+    color: #fff;
+}
+
+/* Testimonials Section */
+.testimonials {
+    padding: 80px 20px;
+    background-color: #fff;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.testimonials h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.testimonial-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    animation: slide 20s linear infinite reverse;
+}
+
+.testimonial {
+    width: 40%;
+    background-color: #f8f8f8;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    flex: 0 0 auto;
+}
+
+.testimonial p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.testimonial h4 {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Contact Section */
+.contact {
+    padding: 80px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    font-weight: 700;
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.contact-form .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 48%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.contact-form textarea {
+    width: 100%;
+    margin-top: 10px;
+    height: 150px;
+}
+
+.contact-form button {
+    padding: 12px 24px;
+    background-color: #007bff;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: 600;
     border: none;
-
 }
 
-footer {    /* <footer> style */
-
-    margin-top: 20px;
+/* Footer */
+.footer {
+    padding: 40px 20px;
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    font-size: 0.8em;
-    font-style: italic;
 }
 
-
-/* img.top-image - Esade logo style  */
-
-.top-image {
-    width: 70px;
-    height: auto;
-    float: left;
+.footer .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.quote p {  /* paragraph style in the .quote class (used in ASIDE)*/
-    font-style: italic;
+.footer nav ul {
+    list-style: none;
+    display: flex;
 }
 
-.body-list {  /* body-list class of the elements of the unordered list in the body */
-  
-    list-style-image: url('../images/small_arrow.png');
-    line-height: 1.8em;  /* inter-line distance <li> */
-    
+.footer nav li {
+    margin: 0 15px;
 }
 
+.footer nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
 
-/* Styles of sections 0, 1 and 2  */
-
-.section0 {
-    background-color: rgb(228, 244, 228);
-    margin-right: 400px;
+/* Scroll to Top Button */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: #fff;
     padding: 15px;
-    margin-top: 10px;
+    border-radius: 50%;
+    font-size: 18px;
+    display: none;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-.section1 {
-    background-color: rgb(248, 246, 212);
-    margin-right: 400px;
-    padding: 15px;
-    margin-top: 10px;
-}
-
-.section2 {
-    background-color: bisque;
-    margin-right: 400px;
-    padding: 15px;
-    margin-top: 10px;
+#backToTop:hover {
+    background-color: #0056b3;
 }
